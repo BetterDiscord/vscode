@@ -9,7 +9,7 @@ import {
   window,
 } from 'vscode';
 import { WebSocketServer } from 'ws';
-import vscode from 'vscode'
+import vscode = require('vscode');
 
 class GetByKeysCodeLensProvider implements CodeLensProvider {
   provideCodeLenses(document: TextDocument) {

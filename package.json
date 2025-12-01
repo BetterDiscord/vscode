@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "@types/bun": "latest",
+    "@types/js-beautify": "^1.14.3",
     "@types/vscode": "^1.85.0",
     "@types/ws": "^8.18.1",
     "@vscode/vsce": "^2.22.0"
@@ -39,6 +40,7 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "js-beautify": "^1.15.4",
     "vscode": "^1.1.37",
     "ws": "^8.18.3"
   }

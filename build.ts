@@ -5,7 +5,7 @@ const result = await Bun.build({
     outdir: './dist',
     target: 'node',
     external: ['vscode'],
-    minify: true,
+    minify: false,
     sourcemap: 'external'
 });
 

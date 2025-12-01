@@ -71,7 +71,7 @@ export function activate(context: ExtensionContext) {
   });
 
   const sendCommand = (action: string, query: string) => {
-    socket!.send(JSON.stringify({ action, query }));
+    socket.send(JSON.stringify({ action, query }));
     // socket technically always exist but typescript is being dumb
   };
 

@@ -1,4 +1,4 @@
-import vscode from 'vscode'
+import vscode = require('vscode');
 
 export async function startOpenSource(source: string) {
   const doc = await vscode.workspace.openTextDocument({

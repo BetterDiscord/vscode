@@ -1,0 +1,45 @@
+{
+  "name": "bdcompanion",
+  "displayName": "BetterDiscord Companion",
+  "description": "A VS Code extension companion for BetterDiscord development",
+  "version": "0.0.1",
+  "publisher": "BetterDiscord",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "type": "module",
+  "private": true,
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "bdcompanion.tryFind",
+        "title": "BD Companion: Try Find"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "bun run build.ts",
+    "watch": "bun run build.ts --watch",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/vscode": "^1.85.0",
+    "@types/ws": "^8.18.1",
+    "@vscode/vsce": "^2.22.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "vscode": "^1.1.37",
+    "ws": "^8.18.3"
+  }
+}

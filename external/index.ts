@@ -7,12 +7,11 @@ const ws = new WebSocket('ws://localhost:8080');
 ws.onmessage = (event) => {
     const result = JSON.parse(event.data);
     let data;
-    
-    const ModuleData = Webpack.getAllByKeys(result.query, { raw: true });
+    const ModuleData = Webpack.getAllByKeys(...result.query, { raw: true });
     if (result.action === 'openSource') {
         if (ModuleData.length === 1) {
             const source = String(n.m[ModuleData[0].id]);
-            data = { success: true, error: false, message: "Found one unique module", source };
+            data = { success: true, error: false, message: "Found one unique module", source, id: ModuleData[0].id };
         } else if (ModuleData.length > 1) {
             data = { success: true, error: false, message: "Found many modules! Please be more unique" };
         } else {

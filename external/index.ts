@@ -24,7 +24,7 @@ ws.onmessage = (event) => {
         ...result.options
     };
     
-    const ModuleData = Webpack[result.type](...unescapedQuery, options);
+    const ModuleData = BdApi.Webpack[result.type](...unescapedQuery, options);
 
     if (result.action === 'openSource') {
         if (ModuleData.length === 0) {
